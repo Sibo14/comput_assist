@@ -15,6 +15,16 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import AppsOutlinedIcon from '@material-ui/icons/AppsOutlined';
+import LockIcon from '@material-ui/icons/Lock';
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+import Grid from '@material-ui/core/Grid';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import Radio from '@material-ui/core/Radio';
+import Paper from '@material-ui/core/Paper';
+
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -138,7 +148,7 @@ export default function PrimarySearchAppBar() {
             <MailIcon />
           </Badge>
         </IconButton>
-        <p>Messages</p>
+        <p>Apps</p>
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
@@ -181,44 +191,40 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
+            <IconButton aria-label = 'Apps-icon' color="inherit">
+              <Badge badgeContent = {23}  color="secondary">
+                <AppsOutlinedIcon />
               </Badge>
             </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
+            <IconButton aria-label = 'lock-icon' color="inherit">
+              <Badge  color="secondary">
+                <LockIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
+
+            <IconButton aria-label = 'Power-icon' color="inherit">
+              <Badge  color="secondary">
+                <PowerSettingsNewIcon />
+              </Badge>
             </IconButton>
+            
           </div>
-          <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div>
+         
         </Toolbar>
       </AppBar>
+
+     
       {renderMobileMenu}
       {renderMenu}
+
+      <p>Hello</p>
+      <h1>World!</h1>
     </div>
+
+    
   );
+
+ 
 }
 
 
