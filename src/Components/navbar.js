@@ -18,6 +18,7 @@ import AppsIcon from "@material-ui/icons/Apps";
 import LockIcon from "@material-ui/icons/Lock";
 import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 import { List, ListItem, Drawer } from "@material-ui/core";
+import MiniGrid from "./miniGrid";
 
 export default function PrimarySearchAppBar() {
   const classes = useStyles();
@@ -113,11 +114,11 @@ export default function PrimarySearchAppBar() {
     return (
       <div>
         <List className={classes.navFont}>
-          <ListItem style={{ textAlign: "center" }}>Action Center</ListItem>
-          <ListItem>It worksdhfdhthrtjhretjrejtj</ListItem>
-          <ListItem>It worksryjrjt</ListItem>
-          <ListItem>It works</ListItem>
+          <ListItem style={{ justifyContent: "center", fontWeight: "bold" }}>
+            Action Center
+          </ListItem>
         </List>
+        <MiniGrid />
       </div>
     );
   };
