@@ -14,6 +14,10 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import AppsIcon from '@material-ui/icons/Apps';
+import LockIcon from '@material-ui/icons/Lock';
+import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -132,9 +136,9 @@ export default function PrimarySearchAppBar() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="secondary">
-            <MailIcon />
+        <IconButton aria-label="Apps-icon" color="inherit">
+          <Badge badgeContent={22} color="secondary">
+            <AppsIcon/>
           </Badge>
         </IconButton>
         <p>Messages</p>
@@ -165,23 +169,12 @@ export default function PrimarySearchAppBar() {
     <div className={classes.grow}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
-          </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Quick Search product"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
@@ -191,26 +184,23 @@ export default function PrimarySearchAppBar() {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
+          <IconButton aria-label="Apps-icon" color="inherit">
+          <Badge badgeContent={22} color="secondary">
+            <AppsIcon/>
               </Badge>
             </IconButton>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
-              <Badge badgeContent={17} color="secondary">
-                <NotificationsIcon />
+            <IconButton aria-label="lock-icon" color="inherit">
+              <Badge color="secondary">
+                <LockIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
+
+            <IconButton aria-label="Power-icon" color="inherit">
+              <Badge color="secondary">
+                <PowerSettingsNewIcon />
+              </Badge>
             </IconButton>
+            
           </div>
           <div className={classes.sectionMobile}>
             <IconButton
