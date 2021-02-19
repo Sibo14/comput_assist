@@ -6,9 +6,14 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
-import { Button, Card } from "@material-ui/core";
+import { Button, Card, Typography } from "@material-ui/core";
 import ApiExample from "./ApiExample";
 import Carousel from "react-elastic-carousel";
+import Badge from "@material-ui/core/Badge";
+import PhoneIcon from "@material-ui/icons/Phone";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
+import PrintIcon from "@material-ui/icons/Print";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,6 +51,54 @@ export default function SpacingGrid() {
 
   return (
     <div className={classes.test}>
+      <div>
+        <Grid
+          style={{
+            justifyContent: "center",
+            fontSize: "small",
+            marginBottom: "5px",
+          }}
+          container
+          xs={12}
+          spacing={6}
+        >
+          <Grid item>
+            <Badge>
+              <PhoneIcon />
+              <Typography>+277990856</Typography>
+            </Badge>
+          </Grid>
+          <Grid item>
+            <Badge>
+              <WhatsAppIcon />
+              <Typography>+277990856</Typography>
+            </Badge>
+          </Grid>
+        </Grid>
+        <Grid
+          style={{
+            justifyContent: "center",
+            fontSize: "8px",
+            marginBottom: "20px",
+          }}
+          container
+          xs={12}
+          spacing={1}
+        >
+          <Grid item>
+            <Badge>
+              <PrintIcon />
+              <Typography>+277990856</Typography>
+            </Badge>
+          </Grid>
+          <Grid item>
+            <Badge>
+              <AlternateEmailIcon />
+              <Typography>ComputAssist@gmail.com</Typography>
+            </Badge>
+          </Grid>
+        </Grid>
+      </div>
       <Grid className={classes.buttonPad} container xs={12} spacing={6}>
         <Grid item xs={6}>
           <Button variant="contained" color="primary">
