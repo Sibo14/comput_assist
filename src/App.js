@@ -10,9 +10,6 @@ function App() {
     <div className="App">
       <Navbar />
       <MainGrid />
-      <Router>
-        <ApiExample />
-      </Router>
     </div>
   );
 }
