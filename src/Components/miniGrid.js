@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
 
   carouselSpace: {
     marginTop: "65px",
-    maxWidth: "320px",
+    maxWidth: "420px",
     justifyContent: "center",
     padding: "5px",
   },
@@ -52,22 +52,16 @@ export default function SpacingGrid() {
 
   return (
     <div className={classes.test}>
-      <Grid container xs={12} spacing={1}>
-        <Grid item xs={4}>
+      <Grid container xs={12} spacing={6}>
+        <Grid item xs={6}>
           <Button variant="contained" color="primary">
-            Users
+            User List
           </Button>
         </Grid>
 
-        <Grid item xs={2}>
+        <Grid item xs={6}>
           <Button variant="contained" color="primary">
-            ComputAssist
-          </Button>
-        </Grid>
-
-        <Grid item xs={8}>
-          <Button variant="contained" color="primary">
-            Profile
+            Live Chat
           </Button>
         </Grid>
       </Grid>
