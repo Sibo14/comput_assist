@@ -14,6 +14,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import PrintIcon from "@material-ui/icons/Print";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -99,20 +100,23 @@ export default function SpacingGrid() {
           </Grid>
         </Grid>
       </div>
-      <Grid className={classes.buttonPad} container xs={12} spacing={6}>
-        <Grid item xs={6}>
-          <Button variant="contained" color="primary">
-            User List
-          </Button>
-        </Grid>
 
-        <Grid item xs={6}>
-          <Button variant="contained" color="primary">
-            Live Chat
-          </Button>
-        </Grid>
-      </Grid>
+      <Router>
+        <Route path="/ApiExample" component={ApiExample} />
+        <Grid className={classes.buttonPad} container xs={12} spacing={6}>
+          <Grid item xs={6}>
+            <Button variant="contained" color="primary">
+              User List
+            </Button>
+          </Grid>
 
+          <Grid item xs={6}>
+            <Button variant="contained" color="primary">
+              Live Chat
+            </Button>
+          </Grid>
+        </Grid>
+      </Router>
       <div>
         <Carousel style={{ width: "350px" }} className={classes.carouselSpace}>
           <img style={{ height: "80px" }} src="images/pharmarcy.png" />
