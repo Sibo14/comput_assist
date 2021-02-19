@@ -169,7 +169,7 @@ export default function SpacingGrid() {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="images/comms.jpg"
+                image="images/pharm.jpg"
                 title="Communications"
               />
               <CardContent>

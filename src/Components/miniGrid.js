@@ -27,18 +27,12 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: "5px",
   },
 
-  carouselSpace: {
-    marginTop: "65px",
-    maxWidth: "420px",
-    justifyContent: "center",
-    padding: "5px",
-  },
-  carouselImage: {
-    maxHeight: "150px",
-  },
-
   buttonPad: {
     paddingLeft: "5px",
+  },
+
+  carouselSpace: {
+    marginTop: "55px",
   },
 }));
 
@@ -67,19 +61,10 @@ export default function SpacingGrid() {
       </Grid>
 
       <div>
-        <Carousel className={classes.carouselSpace}>
-          <img
-            className={classes.carouselImage}
-            src="https://placekitten.com/200/300"
-          />
-          <img
-            className={classes.carouselImage}
-            src="https://placekitten.com/200/300"
-          />
-          <img
-            className={classes.carouselImage}
-            src="https://placekitten.com/200/300"
-          />
+        <Carousel style={{ width: "350px" }} className={classes.carouselSpace}>
+          <img src="images/comput.png" />
+          <img src="images/pharmarcy.png" />
+          <img src="images/comput.png" />
         </Carousel>
       </div>
     </div>
