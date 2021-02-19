@@ -62,9 +62,9 @@ export default function SpacingGrid() {
 
       <div>
         <Carousel style={{ width: "350px" }} className={classes.carouselSpace}>
-          <img src="images/comput.png" />
-          <img src="images/pharmarcy.png" />
-          <img src="images/comput.png" />
+          <img style={{ height: "80px" }} src="images/pharmarcy.png" />
+          <img style={{ height: "150px" }} src="images/getstarted.jpg" />
+          <img style={{ height: "100px" }} src="images/comput.png" />
         </Carousel>
       </div>
     </div>
