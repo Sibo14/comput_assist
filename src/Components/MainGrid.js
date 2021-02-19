@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
   },
   root1: {
     maxWidth: 345,
+    justifyContent: "Center",
+    marginLeft: "10%",
+    marginTop: "15px",
   },
   media: {
     height: 140,
@@ -55,7 +58,7 @@ export default function SpacingGrid() {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="images/winter.png"
+                image="images/shop.jpg"
                 title="Orders"
               />
               <CardContent>
@@ -76,7 +79,7 @@ export default function SpacingGrid() {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="/components/images/winter.png"
+                image="images/message.jpg"
                 title="Messages"
               />
               <CardContent>
