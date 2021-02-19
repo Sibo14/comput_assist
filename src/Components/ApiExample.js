@@ -27,6 +27,7 @@ function Example() {
   console.log(data);
   return (
     <div>
+
       Hi
       <h1>{data[0].name}</h1>
       <h2>{data[0].email}</h2>
