@@ -8,6 +8,13 @@ import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Badge, IconButton } from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,7 +29,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
   test: {
-    marginTop: "250px",
+    marginTop: "30px",
+  },
+  root1: {
+    maxWidth: 345,
+  },
+  media: {
+    height: 140,
   },
 }));
 
@@ -38,20 +51,70 @@ export default function SpacingGrid() {
     <div className={classes.test}>
       <Grid container xs={12} spacing={1}>
         <Grid item xs={4}>
-          <IconButton>
-            <Badge>
-              <ShoppingCartIcon />
-            </Badge>
-          </IconButton>
-          <h1>Orders</h1>
+          <Card className={classes.root1}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="images/winter.png"
+                title="Orders"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Orders
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  New orders,open existing orders,sales usage and more
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions></CardActions>
+          </Card>
         </Grid>
 
         <Grid item xs={4}>
-          <h1>Messages</h1>
+          <Card className={classes.root1}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="/components/images/winter.png"
+                title="Messages"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Messages
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Response: 27
+                  <br />
+                  Supplier Message: 0
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions></CardActions>
+          </Card>
         </Grid>
 
         <Grid item xs={4}>
-          <h1>Maintance</h1>
+          <Card className={classes.root1}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="/components/images/winter.png"
+                title="Maintainance"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Maintenance
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Product updates,
+                  <br />
+                  database backup and update notes
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions></CardActions>
+          </Card>
         </Grid>
       </Grid>
 
@@ -61,11 +124,45 @@ export default function SpacingGrid() {
         </Grid>
 
         <Grid item xs={4}>
-          <h1>Reports</h1>
+          <Card className={classes.root1}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="/components/images/winter.png"
+                title="Reports"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Reports
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  View top products, supplier usage and more.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions></CardActions>
+          </Card>
         </Grid>
 
         <Grid item xs={4}>
-          <h1>Communities</h1>
+          <Card className={classes.root1}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="/components/images/winter.png"
+                title="Communications"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Communications
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Select and send all completed orders
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions></CardActions>
+          </Card>
         </Grid>
       </Grid>
     </div>
