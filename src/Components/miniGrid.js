@@ -46,7 +46,7 @@ export default function SpacingGrid() {
 
   return (
     <div className={classes.test}>
-      <Grid container xs={12} spacing={6}>
+      <Grid className={classes.buttonPad} container xs={12} spacing={6}>
         <Grid item xs={6}>
           <Button variant="contained" color="primary">
             User List
@@ -63,7 +63,7 @@ export default function SpacingGrid() {
       <div>
         <Carousel style={{ width: "350px" }} className={classes.carouselSpace}>
           <img style={{ height: "80px" }} src="images/pharmarcy.png" />
-          <img style={{ height: "150px" }} src="images/getstarted.jpg" />
+          <img style={{ height: "80px" }} src="images/getstarted.jpg" />
           <img style={{ height: "100px" }} src="images/comput.png" />
         </Carousel>
       </div>
