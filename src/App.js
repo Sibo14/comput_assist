@@ -9,10 +9,12 @@ import ApiExample from "./Components/ApiExample";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <MainGrid />
       <Router>
-        <Route path="/ApiExample" component={ApiExample} />
+        <Navbar />
+        <MainGrid />
+        <Switch>
+          <Route path="/ApiExample" component={ApiExample} />
+        </Switch>
       </Router>
     </div>
   );

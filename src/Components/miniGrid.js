@@ -14,6 +14,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import AlternateEmailIcon from "@material-ui/icons/AlternateEmail";
 import PrintIcon from "@material-ui/icons/Print";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -102,9 +103,11 @@ export default function SpacingGrid() {
 
       <Grid className={classes.buttonPad} container xs={12} spacing={6}>
         <Grid item xs={6}>
-          <Button variant="contained" color="primary">
-            User List
-          </Button>
+          <Link style={{ textUnderlinePosition: "none" }} to="/ApiExample">
+            <Button variant="contained" color="primary">
+              User List
+            </Button>
+          </Link>
         </Grid>
 
         <Grid item xs={6}>
