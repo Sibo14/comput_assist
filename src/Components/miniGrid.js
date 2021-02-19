@@ -6,6 +6,9 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 import Paper from "@material-ui/core/Paper";
+import { Button, Card } from "@material-ui/core";
+import ApiExample from "./ApiExample";
+import Carousel from "react-elastic-carousel";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,6 +24,21 @@ const useStyles = makeStyles((theme) => ({
 
   test: {
     marginTop: "25px",
+    marginLeft: "5px",
+  },
+
+  carouselSpace: {
+    marginTop: "65px",
+    maxWidth: "320px",
+    justifyContent: "center",
+    padding: "5px",
+  },
+  carouselImage: {
+    maxHeight: "150px",
+  },
+
+  buttonPad: {
+    paddingLeft: "5px",
   },
 }));
 
@@ -36,17 +54,40 @@ export default function SpacingGrid() {
     <div className={classes.test}>
       <Grid container xs={12} spacing={1}>
         <Grid item xs={4}>
-          <p>Orders</p>
+          <Button variant="contained" color="primary">
+            Users
+          </Button>
         </Grid>
 
-        <Grid item xs={4}>
-          <p>orders</p>
+        <Grid item xs={2}>
+          <Button variant="contained" color="primary">
+            ComputAssist
+          </Button>
         </Grid>
 
-        <Grid item xs={4}>
-          <p>order</p>
+        <Grid item xs={8}>
+          <Button variant="contained" color="primary">
+            Profile
+          </Button>
         </Grid>
       </Grid>
+
+      <div>
+        <Carousel className={classes.carouselSpace}>
+          <img
+            className={classes.carouselImage}
+            src="https://placekitten.com/200/300"
+          />
+          <img
+            className={classes.carouselImage}
+            src="https://placekitten.com/200/300"
+          />
+          <img
+            className={classes.carouselImage}
+            src="https://placekitten.com/200/300"
+          />
+        </Carousel>
+      </div>
     </div>
   );
 }
