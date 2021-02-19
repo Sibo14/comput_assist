@@ -102,7 +102,7 @@ export default function SpacingGrid() {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="/components/images/winter.png"
+                image="images/main.jpg"
                 title="Maintainance"
               />
               <CardContent>
@@ -123,7 +123,24 @@ export default function SpacingGrid() {
 
       <Grid container xs={12} spacing={1}>
         <Grid item xs={4}>
-          <h1>Pharmacy Shop</h1>
+          <Card className={classes.root1}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="images/pharm.jpg"
+                title="Pharmacy"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  Pharmacy Shop
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  Pharmacy supplies, medicine deliveries
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions></CardActions>
+          </Card>
         </Grid>
 
         <Grid item xs={4}>
@@ -131,7 +148,7 @@ export default function SpacingGrid() {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="/components/images/winter.png"
+                image="images/report.png"
                 title="Reports"
               />
               <CardContent>
@@ -152,7 +169,7 @@ export default function SpacingGrid() {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image="/components/images/winter.png"
+                image="images/comms.jpg"
                 title="Communications"
               />
               <CardContent>
